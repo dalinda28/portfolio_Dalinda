@@ -29,7 +29,23 @@
 }
 body{
     min-height: 100vh;
-    background-image: linear-gradient(to bottom right, var(--pink-light), var(--cyan-light) );
+    background-image: linear-gradient(
+  45deg,
+  hsl(294deg 60% 83%) 0%,
+  hsl(302deg 50% 82%) 8%,
+  hsl(312deg 49% 82%) 15%,
+  hsl(322deg 48% 82%) 23%,
+  hsl(333deg 47% 82%) 31%,
+  hsl(344deg 46% 82%) 38%,
+  hsl(357deg 46% 82%) 46%,
+  hsl(9deg 49% 81%) 54%,
+  hsl(18deg 52% 79%) 62%,
+  hsl(25deg 56% 77%) 69%,
+  hsl(30deg 59% 75%) 77%,
+  hsl(34deg 62% 72%) 85%,
+  hsl(38deg 64% 70%) 92%,
+  hsl(41deg 67% 67%) 100%
+);
     background-attachment: fixed;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
@@ -162,7 +178,7 @@ section.fade-out{
     padding: 80px 0;
 }
 .flex-end{
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 /* Section Title */
 .section-title{
@@ -700,7 +716,7 @@ button{
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -40px;
+    right: -15px;
     top: -40px;
 }
 .pp-thumbanil img{
@@ -732,7 +748,9 @@ button{
 .contact-form, 
 .contact-info{
     width: 50%;
-    padding: 0 15px; 
+    display: grid;
+    justify-content: right;
+    padding: 0 15px;
 }
  
 .contact-form .input-group{
@@ -789,11 +807,17 @@ button{
     margin: 6px 4px 0 0;
     transition: all 0.3s ease;
 }
+.contact-info-item .links a{
+    color: var(--main-color);
+    transition: all 0.3s ease;
+}
 .contact-info-item .social-links a:hover{
     color: var(--white);
     background-color: var(--main-color);
 }
-
+textarea {
+  resize: none;
+}
 /* Responsive */
 @media(max-width: 991px){
     .container{

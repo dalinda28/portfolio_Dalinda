@@ -1,3 +1,4 @@
+
 window.addEventListener("load", () => {
     document.querySelector(".main").classList.remove("hidden");
     document.querySelector(".home-section").classList.add("active");
@@ -64,7 +65,8 @@ tabsContainer.addEventListener("click", (e) => {
 document.addEventListener("click", (e) =>{
     if(e.target.classList.contains("view-project-btn")){
         togglePortfolioPopup();
-        document.querySelector(".portofolio-popup").scrollTo(0,0);
+        document.querySelector(".portofolio-popup");
+        console.log(e.target.parentElement)
         portfolioItemDetails(e.target.parentElement);
     }
 })
@@ -82,10 +84,9 @@ document.addEventListener("click", (e) =>{
     }
 })
 function portfolioItemDetails(portfolioItem){
-    document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
 
-    document.querySelector(".pp-header h3").innerHTML = portfolioItem.querySelector(".portfolio-item-title").innerHTML;
-
+    let test = document.querySelector(".pp-header h3").innerHTML = portfolioItem.querySelector(".portfolio-item-title").innerHTML;
+console.log(test)
     document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 
 }
