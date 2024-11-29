@@ -496,7 +496,7 @@ button{
     padding: 15px;
 }
 .home-img .img-box{
-    max-width: 360px;
+    max-width: 250px;
     background-color: var(--white-alpha-25);
     border-radius: 50%;
     border: 8px solid var(--white-alpha-25 );

@@ -90,8 +90,8 @@ console.log(test)
     document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 
 }
-
-/* Paw button  */
+console.log("Script chargé");
+/* Paw button */
 let confettiAmount = 60,
     confettiColors = [
         '#7d32f5',
@@ -115,28 +115,71 @@ let confettiAmount = 60,
         to.appendChild(elem);
     };
 
-document.querySelectorAll('.paw-button').forEach(elem => {
-    elem.addEventListener('click', e => {
-        let number = elem.children[1].textContent;
-        if(!elem.classList.contains('animation')) {
-            elem.classList.add('animation');
-            for(let i = 0; i < confettiAmount; i++) {
-                createConfetti(elem);
+// On attend que tout le DOM soit chargé avant d'exécuter le code
+document.addEventListener('DOMContentLoaded', async () => {
+    const resultSpan = document.querySelector('#result'); // Récupère l'élément pour afficher les likes
+    const confettiAmount = 50; // Nombre de confettis à afficher
+
+    // Récupérer le nombre de likes depuis le backend au chargement de la page
+    const response = await fetch('http://localhost:3000/api/likes');
+    const data = await response.json();
+    let likeCount = data.likeCount;
+
+    // Assurer que la valeur est bien un nombre
+    if (isNaN(likeCount)) {
+        likeCount = 102; // Valeur par défaut si ce n'est pas un nombre
+    }
+
+    console.log('Likes récupérés:', likeCount);  // Log des likes récupérés
+    resultSpan.textContent = likeCount;
+
+    // Ajouter l'événement au clic sur les boutons "like"
+    document.querySelectorAll('.paw-button').forEach(elem => {
+        elem.addEventListener('click', async e => {
+            e.preventDefault(); // Empêche le comportement par défaut (ici le lien)
+            
+            // Récupérer le nombre actuel de likes
+            let number = parseInt(resultSpan.textContent); // Convertir en nombre entier
+            console.log('Nombre de likes avant le clic:', number);  // Log avant le clic
+
+            // Vérifier si le bouton a déjà l'animation
+            if (!elem.classList.contains('animation')) {
+                elem.classList.add('animation');
+
+                // Ajouter des confettis (si nécessaire)
+                for (let i = 0; i < confettiAmount; i++) {
+                    createConfetti(elem); // Fonction pour afficher des confettis
+                }
+
+                // Ajouter une animation et envoyer la nouvelle valeur de like au backend
+                setTimeout(() => {
+                    elem.classList.add('confetti');
+                    setTimeout(async () => {
+                        elem.classList.add('liked');
+                        resultSpan.textContent = number + 1; // Met à jour l'affichage local du nombre de likes
+
+                        // Envoi de la mise à jour des likes au backend
+                        console.log('Envoi de la nouvelle valeur de likes:', number + 1);  // Log de la valeur envoyée
+                        await fetch('http://localhost:3000/api/likes', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ likeCount: number + 1 }) // Envoi de la nouvelle valeur
+                        });
+                    }, 400);
+                }, 260);
+            } else {
+                // Si le bouton est déjà cliqué, on le désactive
+                elem.classList.remove('animation', 'liked', 'confetti');
+                resultSpan.textContent = number - 1; // Met à jour l'affichage local du nombre de likes
+
+                // Envoi de la diminution des likes au backend
+                console.log('Envoi de la nouvelle valeur de likes:', number - 1);  // Log de la valeur envoyée
+                await fetch('http://localhost:3000/api/likes', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ likeCount: number - 1 }) // Envoi de la nouvelle valeur
+                });
             }
-            setTimeout(() => {
-                elem.classList.add('confetti');
-                setTimeout(() => {
-                    elem.classList.add('liked');
-                    elem.children[1].textContent = parseInt(number) + 1;
-                }, 400);
-                setTimeout(() => {
-                    elem.querySelectorAll('i').forEach(i => i.remove());
-                }, 600);
-            }, 260);
-        } else {
-            elem.classList.remove('animation', 'liked', 'confetti');
-            elem.children[1].textContent = parseInt(number) - 1;
-        }
-        e.preventDefault();
+        });
     });
 });
