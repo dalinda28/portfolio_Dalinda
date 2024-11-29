@@ -86,11 +86,9 @@ document.addEventListener("click", (e) =>{
 function portfolioItemDetails(portfolioItem){
 
     let test = document.querySelector(".pp-header h3").innerHTML = portfolioItem.querySelector(".portfolio-item-title").innerHTML;
-console.log(test)
     document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 
 }
-console.log("Script chargé");
 /* Paw button */
 let confettiAmount = 60,
     confettiColors = [
@@ -130,7 +128,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         likeCount = 102; // Valeur par défaut si ce n'est pas un nombre
     }
 
-    console.log('Likes récupérés:', likeCount);  // Log des likes récupérés
     resultSpan.textContent = likeCount;
 
     // Ajouter l'événement au clic sur les boutons "like"
@@ -140,7 +137,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             // Récupérer le nombre actuel de likes
             let number = parseInt(resultSpan.textContent); // Convertir en nombre entier
-            console.log('Nombre de likes avant le clic:', number);  // Log avant le clic
 
             // Vérifier si le bouton a déjà l'animation
             if (!elem.classList.contains('animation')) {
@@ -159,7 +155,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         resultSpan.textContent = number + 1; // Met à jour l'affichage local du nombre de likes
 
                         // Envoi de la mise à jour des likes au backend
-                        console.log('Envoi de la nouvelle valeur de likes:', number + 1);  // Log de la valeur envoyée
                         await fetch('http://localhost:3000/api/likes', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
@@ -173,7 +168,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 resultSpan.textContent = number - 1; // Met à jour l'affichage local du nombre de likes
 
                 // Envoi de la diminution des likes au backend
-                console.log('Envoi de la nouvelle valeur de likes:', number - 1);  // Log de la valeur envoyée
                 await fetch('http://localhost:3000/api/likes', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
