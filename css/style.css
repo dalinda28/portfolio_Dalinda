@@ -165,8 +165,10 @@ section.fade-out{
     width: 100%;
 }
 .row{
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;        
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .align-items-center{
     align-items: center;
@@ -508,29 +510,17 @@ button{
 }
 
 /* About section */
-.about-img{
-    width: 40%;
-    padding: 0 15px;
-}
+
 .about-text{
-    width: 60%;
+    width: 80%;
     padding: 0 15px;
-}
-.about-img .img-box{
-    background-color: var(--white-alpha-25);
-    max-width: 380px;
-    border: 1 px solid var(--white-alpha-40);
-    margin: auto;
-    border-radius: 10px;
-}
-.about-img .img-box img{
-    width: 100%;
 }
 .about-text h3 {
     text-transform: capitalize;
     font-size: 20px;
     margin: 20px 0;
 }
+
 .about-text .skills{
     display: flex;
     flex-wrap: wrap;
@@ -586,61 +576,86 @@ button{
     opacity: 1;
     cursor: auto ;
 }
-.about-text .timeline{
+.about-text .timeline {
     position: relative;
-}
-.about-text .timeline::before{
-    content: '';
-    position: absolute ;
-    height: 100%;
-    width: 1px;
-    top: 0;
-    left: 5px;
-    background-color: var(--main-color);
-}
-.about-text .tab-content{
-    padding: 40px 0;
-    display: none;
-}
-.about-text .tab-content.active{
-    display: block;
-}
-.about-text .timeline-item{
-    margin-bottom: 30px;
-    position: relative;
-    padding: 10px 0 0 40px;
-}
-.about-text .timeline-item::before{
-    content: '';
-    position: absolute;
-    height: 11px;
-    width: 11px;
-    background-color: var(--main-color );
-    left: 0;
-    top: 16px;
-    border-radius: 50%;
-}
-.about-text .timeline-item:last-child{
-    margin-bottom: 0 ;
-}
-.about-text .timeline-item .date{
-    display: block;
-    color: var(--main-color);
-    font-weight: 400;
-    margin: 0 0 10px;
-}
-.about-text .timeline-item h4{
-    font-size: 18px;
-    text-transform: capitalize;
-    margin: 0 0 10px;
-}
-.about-text .timeline-item h4 span{
-    font-weight: 400;
-}
-.about-text .btn{
-     margin: 0 15px 15px 0;
 }
 
+.about-text .timeline::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px; 
+    top: 0;
+    left: 22%; 
+    transform: translateX(-50%);
+    background-color: var(--main-color);
+}
+
+.about-text .tab-content {
+    padding: 40px 0;
+}
+
+.about-text .tab-content.active {
+    display: block;
+}
+.about-text .timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 20px;
+}
+.about-text .timeline-item .date {
+    text-align: right;
+    color: var(--main-color);
+    font-weight: 600;
+    width: 20%;
+    font-size: 18px;
+}
+
+.about-text .timeline-item .content {
+    text-align: left;
+    padding-left: 25px;
+}
+.about-text .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 22%; 
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.about-text .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.about-text .timeline-item .date {
+    text-align: right;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.about-text .timeline-item .content {
+    text-align: left;
+}
+
+
+.about-text .timeline-item h4 span {
+    font-weight: 400;
+}
+
+.about-text .timeline-item .content a {
+    color: inherit; 
+}
+.about-text .btn {
+    margin: 0 15px 15px 0;
+}
 /*Portfolio Section*/
 .portfolio-item{
     padding-bottom: 50px;
@@ -819,6 +834,27 @@ textarea {
   resize: none;
 }
 /* Responsive */
+@media(max-width: 767px) {
+    .about-text .timeline-item {
+      align-items: center;
+      text-align: center;
+      padding: 20px 0;
+    }
+  
+    .about-text .timeline-item::before {
+      left: 50%;
+    }
+    .about-text .timeline-item .date,
+    .about-text .timeline-item .content {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .about-text .timeline::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 @media(max-width: 991px){
     .container{
         padding: 0;
