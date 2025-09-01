@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Balises SEO -->
-    <meta name="description" content="Dalinda Aloui, développeuse web freelance à Paris, spécialisée en React.js, Node.js, SEO et design UX/UI. Découvrez mes projets et discutons de vos idées !" /><meta name="keywords"
-        content="développeuse fullstack, développeuse freelance Paris, Dalinda Aloui, développeur web Île-de-France, SEO, React, Node.js, UX/UI, design web, hébergement web, création site internet, développeur indépendant" />
-    <meta name="author" content="Dalinda">
+    <title>Dalinda Aloui – Développeuse Web</title>
+    <meta name="description"
+        content="Portfolio de Dalinda Aloui, développeuse web freelance à Paris, spécialisée en React.js, Node.js, SEO et design UX/UI. Découvrez mes projets et discutons de vos idées !">
+    <meta name="keywords"
+        content="Dalinda Aloui, développeuse fullstack, développeuse freelance Paris, Dalinda Aloui, développeur web Île-de-France, SEO, React, Node.js, UX/UI, design web, hébergement web, création site internet, développeur indépendant">
+    <meta name="author" content="Dalinda Aloui">
     <meta name="language" content="fr" />
     <meta name="geo.region" content="FR-IDF" /> <!-- Île-de-France -->
     <meta name="geo.placename" content="Paris" />
@@ -39,7 +42,7 @@
     <!-- Feuilles de style -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/magic-mouse.css">
+    <link rel="stylesheet" href="css/magic-mouse.css" media="print" onload="this.media='all'">
 
     <!-- Balises additionnelles pour SEO -->
     <meta name="robots" content="index, follow" />
@@ -123,7 +126,7 @@
             <div class="container">
                 <div class="row flex-end">
                     <a href="/">
-                        <img src="img/logo.WebP" alt="Logo" width="50" height="50" loading="lazy">
+                        <img src="img/logo.WebP" alt="Logo Dalinda ALOUI" width="50" height="50" loading="lazy">
                     </a>
                     <button type="button" class="nav-toggler" aria-label="Ouvrir le menu">
                         <span></span>
@@ -131,10 +134,11 @@
                     <nav class="nav">
                         <div class="nav-inner">
                             <ul>
-                                <li><a href="#home" class="nav-item link-item magic-hover magic-hover__square">Accueil</a>
+                                <li><a href="#home"
+                                        class="nav-item link-item magic-hover magic-hover__square">Accueil</a>
                                 </li>
-                                <li><a href="#about"
-                                        class="nav-item link-item magic-hover magic-hover__square">À propos</a></li>
+                                <li><a href="#about" class="nav-item link-item magic-hover magic-hover__square">À
+                                        propos</a></li>
                                 <li><a href="#portfolio" class="nav-item link-item magic-hover magic-hover__square">IT
                                         projects</a></li>
                                 <li><a href="#contact"
@@ -150,7 +154,7 @@
         <!--Home section Start-->
         <section class="home-section align-items-center" id="home">
             <div class="container">
-                <div class="row ">
+                <div class="row">
                     <div class="home-text">
                         <h1>Hello, I'm<strong> Dalinda</strong></h1>
                         <h2> Développeuse web</h2>
@@ -228,7 +232,7 @@
                     </div>
                     <div class="home-img">
                         <div class="img-box">
-                            <img src="img/profile-img.WebP" alt="profile-img" loading="lazy" />
+                            <img src="img/profile-img.WebP" alt="Dalinda Aloui développeuse web"  loading="eager" fetchpriority="high" />
                         </div>
                     </div>
                 </div>
@@ -269,12 +273,28 @@
                         <!--Experience Start-->
                         <div class="tab-content">
                             <div class="timeline">
+                                 
+                                <div class="timeline-item">
+                                    <div class="date">06/2025</div>
+                                    <div class="content">
+                                        <h4>
+                                           Obtention de la certification “Foundations of Project Management” par Google
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="date">04/2025</div>
+                                    <div class="content">
+                                        <h4>
+                                           Participation au projet OryxChange en tant que Développeuse Full-stack
+                                        </h4>
+                                    </div>
+                                </div>
                                 <div class="timeline-item">
                                     <div class="date">10/2024</div>
                                     <div class="content">
                                         <h4>
-                                            <a href="https://youmiratek.fr/"
-                                                target="_blank" rel="noopener noreferrer">
+                                            <a href="https://youmiratek.fr/" target="_blank" rel="noopener noreferrer">
                                                 Lancement de projets freelance avec Youmiratek
                                                 <i class="fas fa-external-link-alt"></i>
                                             </a>
@@ -385,13 +405,17 @@
                         <p>Depuis très jeune, j’ai toujours été attirée par <strong>l’informatique</strong>.</p>
                         <p>Vers <strong>13 ans</strong>, je m’amusais déjà à explorer <strong>Linux</strong>, en
                             tapant des lignes de commande pour
-                            optimiser mon ordinateur, comme essayer d’augmenter l’espace de stockage. C’était naturel pour moi, presque un jeu.</p>
-                        <br><p>Au <strong>lycée</strong>, j’ai découvert la programmation avec <strong>Pascal</strong>, mon
+                            optimiser mon ordinateur, comme essayer d’augmenter l’espace de stockage. C’était naturel
+                            pour moi, presque un jeu.</p>
+                        <br>
+                        <p>Au <strong>lycée</strong>, j’ai découvert la programmation avec <strong>Pascal</strong>, mon
                             tout premier langage.</p>
                         <p>Puis, plus tard dans mon parcours scolaire, j’ai appris à utiliser différentes technologies
                             comme <strong>PHP</strong>, <strong>Python</strong>, <strong>Perl</strong> ou encore
-                            <strong>Java</strong>. Ces langages m’ont permis de développer ma <strong>logique</strong>, mon
-                            <strong>organisation</strong> et ma <strong>compréhension des systèmes</strong>.</p>
+                            <strong>Java</strong>. Ces langages m’ont permis de développer ma <strong>logique</strong>,
+                            mon
+                            <strong>organisation</strong> et ma <strong>compréhension des systèmes</strong>.
+                        </p>
                         <br>
                         <p>Aujourd’hui, j’aime particulièrement travailler avec <strong>React.js</strong> pour
                             construire des interfaces
@@ -415,174 +439,167 @@
             <div class="container">
                 <div class="row">
                     <div class="section-title">
-                        <h2>IT Projects</h2>
+                        <h2>Projets Informatique</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <!--Portfolio Item Start-->
+                    <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/izisalles.png" alt="portfolio item thumb" loading="lazy">
+                            <img src="img/izisalles.png" alt="Aperçu du projet" loading="lazy">
                         </div>
                         <h3 class="portfolio-item-title">IZISALLES</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">View
-                            Project</button>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>Izisalle is a website for booking conference rooms. It was designed in collaboration
-                                    with two students as part of a project in the Web and Mobile Project degree.</p>
+                                <p>Izisalle est un site de réservation de salles de conférence. Il a été réalisé en
+                                    collaboration avec deux étudiants dans le cadre du projet de licence Web et Mobile.
+                                </p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Created - <span>April 2021</span></li>
-                                    <li>technologies used - <span>NodeJS, MYSQL, VueJS, Vuex</span></li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>Github link- <span><a
+                                    <li>Créé - <span>Avril 2021</span></li>
+                                    <li>Technologies utilisées - <span>NodeJS, MYSQL, VueJS, Vuex</span></li>
+                                    <li>Rôle - <span>Frontend</span></li>
+                                    <li>Lien Github - <span><a
                                                 href="https://github.com/dalinda28/IZISALLES/tree/main/reservations_salles"
-                                                target="_blank">IZISALLES </a></span></li>
+                                                target="_blank">IZISALLES</a></span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!--Portfolio Item End-->
-                    <!--Portfolio Item Start-->
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/izigo_ReactNative.png" alt="portfolio item thumb" loading="lazy">
+                            <img src="img/izigo_ReactNative.png" alt="Aperçu du projet" loading="lazy">
                         </div>
                         <h3 class="portfolio-item-title">IziGo</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">View
-                            Project</button>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>Izigo is an application dedicated to users of the public transport of the RATP and
-                                    SNCF. It was designed in collaboration with two students in the framework of a
-                                    project in the Web and Mobile Project degree.</p>
+                                <p>IziGo est une application dédiée aux utilisateurs des transports publics de la RATP
+                                    et de la SNCF. Elle a été conçue en collaboration avec deux étudiants dans le cadre
+                                    d'un projet de licence Web et Mobile.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Created - <span>juin 2021</span></li>
-                                    <li>technologies used - <span>React Native</span></li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>Github link - <span><a href="https://github.com/dalinda28/izigo"
-                                                target="_blank">izigo </a></span></li>
+                                    <li>Créé - <span>Juin 2021</span></li>
+                                    <li>Technologies utilisées - <span>React Native</span></li>
+                                    <li>Rôle - <span>Frontend</span></li>
+                                    <li>Lien Github - <span><a href="https://github.com/dalinda28/izigo"
+                                                target="_blank">izigo</a></span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!--Portfolio Item End-->
-                    <!--Portfolio Item Start-->
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/FEELUNIQUE_Symfony.png" alt="e-shop" loading="lazy">
+                            <img src="img/FEELUNIQUE_Symfony.png" alt="E-commerce" loading="lazy">
                         </div>
                         <h3 class="portfolio-item-title">FEELUNIQUE</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">View
-                            Project</button>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>Creating an e-commerce website with <strong>Symfony</strong></p>
+                                <p>Création d'un site e-commerce avec <strong>Symfony</strong>.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Created - <span>November 2020</span></li>
-                                    <li>technologies used - <span>Symfony</span></li>
-                                    <li>Role - <span>Frontend - Backend</span></li>
-                                    <li>Github link - <span><a href="https://github.com/dalinda28/FEELUNIQUE-Ecommerce"
-                                                target="_blank">https://github.com/dalinda28/FEELUNIQUE-Ecommerce</a></span>
-                                    </li>
+                                    <li>Créé - <span>Novembre 2020</span></li>
+                                    <li>Technologies utilisées - <span>Symfony</span></li>
+                                    <li>Rôle - <span>Frontend - Backend</span></li>
+                                    <li>Lien Github - <span><a href="https://github.com/dalinda28/FEELUNIQUE-Ecommerce"
+                                                target="_blank">FEELUNIQUE-Ecommerce</a></span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!--Portfolio Item End-->
+                    <!-- Portfolio Item End -->
 
-                    <!--Portfolio Item Start-->
+                    <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/ecommerce.png" alt="portfolio item thumb" loading="lazy">
+                            <img src="img/ecommerce.png" alt="Aperçu du projet" loading="lazy">
                         </div>
                         <h3 class="portfolio-item-title">E-commerce</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">View
-                            Project</button>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>Creating an e-commerce site with wordpress</p>
+                                <p>Création d'un site e-commerce avec Wordpress.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Created - <span>Avril 2022</span></li>
-                                    <li>technologies used - <span>Wordpress : WooCommerce / Stripe / Paypal / Yoast SEO
-                                            / Elementor
-                                        </span></li>
-                                    <li>Link - <span><a href="https://feelunique.alouidalinda.fr/"
-                                                target="_blank">feelunique.alouidalinda.fr/</a></span></li>
+                                    <li>Créé - <span>Avril 2022</span></li>
+                                    <li>Technologies utilisées - <span>WordPress : WooCommerce / Stripe / PayPal / Yoast
+                                            SEO / Elementor</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!--Portfolio Item End-->
-                    <!--Portfolio Item Start-->
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/Isoeon.png" alt="portfolio item thumb" loading="lazy">
+                            <img src="img/Isoeon.png" alt="Aperçu du projet" loading="lazy">
                         </div>
                         <h3 class="portfolio-item-title">Isoeon</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">View
-                            Project</button>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p> Collective project of a website for pre-ordering a customizable thermos.
-                                </p>
+                                <p>Projet collectif d'un site web de précommande de thermos personnalisable.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Created - <span>February 2022</span></li>
-                                    <li>technologies used - <span>Html, Sass</span></li>
-                                    <li>Role - <span>Frontend</span></li>
-                                    <li>Link - <span><a href="https://isoeon.alouidalinda.fr/index.html"
-                                                target="_blank">www.isoeon.alouidalinda.fr </a></span></li>
+                                    <li>Créé - <span>Février 2022</span></li>
+                                    <li>Technologies utilisées - <span>HTML, Sass</span></li>
+                                    <li>Rôle - <span>Frontend</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!--Portfolio Item End-->
-                    <!--Portfolio Item Start-->
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/aalia.png" alt="portfolio item thumb" loading="lazy">
+                            <img src="img/aalia.png" alt="Aperçu du projet" loading="lazy">
                         </div>
-                        <h3 class="portfolio-item-title">Chatbot AALIA Tech</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">View
-                            Project</button>
+                        <h3 class="portfolio-item-title">Chatbot AALIA</h3>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>This project is an improvement of a chatbot as part of my 8 weeks internship in the
-                                    start-up AALIA.Tech, using <strong>vueJS</strong> then hosting it with
+                                <p>Amélioration d'un chatbot dans le cadre de mon stage de 8 semaines dans la start-up
+                                    AALIA.Tech, en utilisant <strong>VueJS</strong> et en l'hébergeant sur
                                     <strong>Firebase</strong>.
-
                                 </p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Created - <span>August 2020</span></li>
-                                    <li>technologies used - <span>VueJS, Sass, Firebase, Webpack, ESLint</span></li>
-                                    <li>Role - <span>Frontend - Backend </span></li>
+                                    <li>Créé - <span>Août 2020</span></li>
+                                    <li>Technologies utilisées - <span>VueJS, Sass, Firebase, Webpack, ESLint</span>
+                                    </li>
+                                    <li>Rôle - <span>Frontend - Backend</span></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <!--Portfolio Item End-->
+                    <!-- Portfolio Item End -->
                 </div>
             </div>
         </section>
-        <!--Portfolio Section End-->
+        <!-- Portfolio Section End -->
+
 
         <!-- Contact Section Start -->
         <section class="contact-section sec-padding" id="contact">
             <div class="container">
                 <div class="section-title">
-                    <h2>Contact me</h2>
+                    <h2>Contactez-moi</h2>
                 </div>
             </div>
             <div class="container">
@@ -613,11 +630,11 @@
                     <div class="contact-info">
                         <br><br><br><br>
                         <div class="contact-info-item">
-                            <h3> I’m always up for a chat.</h3><br>
+                            <h3>Je suis toujours disponible pour discuter.</h3><br>
                             <div class="links">
-                                <p><strong><a href="mailto:contact@youmiratek.fr">Pop me an email</a></strong> at
+                                <p><strong><a href="mailto:contact@youmiratek.fr">Envoyez-moi un email</a></strong> à
                                     contact@youmiratek.fr
-                                    or give me a shout on social media.</p><br>
+                                    ou contactez-moi sur les réseaux sociaux.</p><br>
                                 <div class="social-links">
                                     <a href="https://github.com/dalinda28" target="_blank"><i
                                             class="fab fa-github"></i></a>
