@@ -199,66 +199,44 @@ let confettiAmount = 60,
     };
 
 // On attend que tout le DOM soit chargé avant d'exécuter le code
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
     const resultSpan = document.querySelector('#result'); // Récupère l'élément pour afficher les likes
-    const confettiAmount = 50; // Nombre de confettis à afficher
-
-    // Récupérer le nombre de likes depuis le backend au chargement de la page
-    const response = await fetch('http://localhost:3000/api/likes');
-    const data = await response.json();
-    let likeCount = data.likeCount;
-
-    // Assurer que la valeur est bien un nombre
-    if (isNaN(likeCount)) {
-        likeCount = 102; // Valeur par défaut si ce n'est pas un nombre
+    
+    // Récupérer le nombre de likes depuis localStorage
+    let likeCount = parseInt(localStorage.getItem('portfolioLikes'));
+    
+    // Si pas de valeur ou valeur inférieure à 160, commencer à 160
+    if (!likeCount || likeCount < 160) {
+        likeCount = 160;
+        localStorage.setItem('portfolioLikes', '160');
     }
-
-    resultSpan.textContent = likeCount;
+    
+    // Afficher le nombre de likes
+    if (resultSpan) {
+        resultSpan.textContent = likeCount;
+    }
 
     // Ajouter l'événement au clic sur les boutons "like"
     document.querySelectorAll('.paw-button').forEach(elem => {
-        elem.addEventListener('click', async e => {
+        elem.addEventListener('click', (e) => {
             e.preventDefault(); // Empêche le comportement par défaut (ici le lien)
             
             // Récupérer le nombre actuel de likes
-            let number = parseInt(resultSpan.textContent); // Convertir en nombre entier
+            let number = parseInt(resultSpan.textContent) || 0;
 
-            // Vérifier si le bouton a déjà l'animation
-            if (!elem.classList.contains('animation')) {
-                elem.classList.add('animation');
-
-                // Ajouter des confettis (si nécessaire)
-                for (let i = 0; i < confettiAmount; i++) {
-                    createConfetti(elem); // Fonction pour afficher des confettis
-                }
-
-                // Ajouter une animation et envoyer la nouvelle valeur de like au backend
-                setTimeout(() => {
-                    elem.classList.add('confetti');
-                    setTimeout(async () => {
-                        elem.classList.add('liked');
-                        resultSpan.textContent = number + 1; // Met à jour l'affichage local du nombre de likes
-
-                        // Envoi de la mise à jour des likes au backend
-                        await fetch('http://localhost:3000/api/likes', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ likeCount: number + 1 }) // Envoi de la nouvelle valeur
-                        });
-                    }, 400);
-                }, 260);
-            } else {
-                // Si le bouton est déjà cliqué, on le désactive
-                elem.classList.remove('animation', 'liked', 'confetti');
-                resultSpan.textContent = number - 1; // Met à jour l'affichage local du nombre de likes
-
-                // Envoi de la diminution des likes au backend
-                await fetch('http://localhost:3000/api/likes', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ likeCount: number - 1 }) // Envoi de la nouvelle valeur
-                });
-            }
+            // Incrémenter le compteur
+            number++;
+            resultSpan.textContent = number;
+            localStorage.setItem('portfolioLikes', number.toString());
+            
+            // Ajouter l'animation
+            elem.classList.add('animation');
+            setTimeout(() => {
+                elem.classList.remove('animation');
+                elem.classList.add('liked');
+            }, 500);
+            
+            console.log('Paw button clicked! Count:', number); // Debug
         });
     });
 });

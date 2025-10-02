@@ -247,25 +247,30 @@ button{
 
 /* Paw button */
 .paw-button {
-    background-color: var(--white-alpha-25);
+    background-color: var(--white-alpha-25) !important;
     --background-active: #fee8f4;
     --border: #f1eceb;
     --border-active: #eec2db;
     --text: #000;
-    display: inline-block;
-    visibility: visible;
-    opacity: 1;
-    position: relative;
-    border: 1px solid var(--white-alpha-40);
-    border-radius: 30px;
-    padding: 12px 20px;
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    border: 1px solid var(--white-alpha-40) !important;
+    border-radius: 30px !important;
+    padding: 12px 20px !important;
+    color: var(--white) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 120px !important;
+    min-height: 40px !important;
+    margin-top: 15px !important;
     --number: #9c9496;
     --number-active: #000;
     --heart-background: #fff;
@@ -317,13 +322,16 @@ button{
 }
 
 .paw-button .text {
-    position: relative;
+    position: relative !important;
     backface-visibility: hidden;
     transform: translateZ(0);
-    z-index: 3;
+    z-index: 3 !important;
     margin-right: 8px;
     transition: width 0.25s;
-    width: var(--w, 80px);
+    width: var(--w, 80px) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .paw-button .text span, .paw-button .text svg {
@@ -352,12 +360,21 @@ button{
 }
 
 .paw-button > span {
-    display: block;
-    position: relative;
+    display: block !important;
+    position: relative !important;
     backface-visibility: hidden;
     transform: translateZ(0);
-    z-index: 2;
-    color: var(--number);
+    z-index: 2 !important;
+    color: var(--number) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Style pour le chiffre dans le texte */
+.paw-button .text span #result {
+    color: var(--number) !important;
+    font-weight: bold !important;
+    display: inline !important;
 }
 
 
@@ -517,9 +534,6 @@ button{
     --border: var(--border-active);
 }
 
-.paw-button.liked .text {
-    --w: 21px;
-}
 
 .paw-button.liked .text svg {
     --o: 1;
