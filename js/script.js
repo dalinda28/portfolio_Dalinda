@@ -50,17 +50,33 @@ document.addEventListener("click", (e) =>{
 /* Portfolio Item Details Popup */
 document.addEventListener("click", (e) =>{
     if(e.target.classList.contains("view-project-btn")){
-        togglePortfolioPopup();
-        document.querySelector(".portofolio-popup");
-        console.log(e.target.parentElement)
+        e.preventDefault();
         portfolioItemDetails(e.target.parentElement);
+        togglePortfolioPopup();
     }
 })
 
 function togglePortfolioPopup(){
-    document.querySelector(".portfolio-popup").classList.toggle("open");
-    document.body.classList.toggle("hide-scrolling");
-    document.querySelector(".main").classList.toggle("fade-out");
+    const popup = document.querySelector(".portfolio-popup");
+    const isOpen = popup.classList.contains("open");
+    
+    if (isOpen) {
+        popup.classList.remove("open");
+        document.body.classList.remove("hide-scrolling");
+        document.querySelector(".main").classList.remove("fade-out");
+        popup.setAttribute("aria-hidden", "true");
+    } else {
+        popup.classList.add("open");
+        document.body.classList.add("hide-scrolling");
+        document.querySelector(".main").classList.add("fade-out");
+        popup.setAttribute("aria-hidden", "false");
+        
+        // Focus sur le bouton de fermeture pour l'accessibilité
+        const closeBtn = popup.querySelector(".pp-close");
+        if (closeBtn) {
+            closeBtn.focus();
+        }
+    }
 }
 document.querySelector(".pp-close").addEventListener("click", togglePortfolioPopup);
 
@@ -69,11 +85,94 @@ document.addEventListener("click", (e) =>{
         togglePortfolioPopup();
     }
 })
+
+// Gestion des touches clavier pour l'accessibilité
+document.addEventListener("keydown", (e) => {
+    const popup = document.querySelector(".portfolio-popup");
+    if (popup && popup.classList.contains("open")) {
+        if (e.key === "Escape") {
+            togglePortfolioPopup();
+        }
+        
+        // Trap du focus dans le modal
+        if (e.key === "Tab") {
+            const focusableElements = popup.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+            
+            if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                    lastElement.focus();
+                    e.preventDefault();
+                }
+            } else {
+                if (document.activeElement === lastElement) {
+                    firstElement.focus();
+                    e.preventDefault();
+                }
+            }
+        }
+    }
+})
 function portfolioItemDetails(portfolioItem){
+    // Récupérer les éléments de la modale
+    const popupTitle = document.querySelector(".pp-header h3");
+    const popupImage = document.querySelector(".pp-project-image");
+    const popupDescription = document.querySelector(".pp-project-description");
+    const popupCreated = document.querySelector(".pp-created");
+    const popupTechnologies = document.querySelector(".pp-technologies");
+    const popupRole = document.querySelector(".pp-role");
+    const popupFeatures = document.querySelector(".pp-features");
+    const popupGithub = document.querySelector(".pp-github");
+    const popupGithubLink = document.querySelector(".pp-github-link");
 
-    let test = document.querySelector(".pp-header h3").innerHTML = portfolioItem.querySelector(".portfolio-item-title").innerHTML;
-    document.querySelector(".pp-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
+    // Récupérer les données du projet
+    const projectTitle = portfolioItem.querySelector(".portfolio-item-title").innerHTML;
+    const projectImage = portfolioItem.querySelector(".portfolio-item-thumbnail img").src;
+    const projectImageAlt = portfolioItem.querySelector(".portfolio-item-thumbnail img").alt;
+    
+    // Récupérer les détails du projet
+    const projectDetails = portfolioItem.querySelector(".portfolio-item-details");
+    const projectDescription = projectDetails.querySelector(".description p").innerHTML;
+    const projectInfo = projectDetails.querySelectorAll(".general-info li");
 
+    // Remplir la modale
+    popupTitle.innerHTML = projectTitle;
+    popupImage.src = projectImage;
+    popupImage.alt = projectImageAlt;
+    popupDescription.innerHTML = projectDescription;
+    
+    // Masquer le lien GitHub par défaut
+    popupGithub.style.display = "none";
+
+    // Remplir les informations du projet
+    projectInfo.forEach((info, index) => {
+        const text = info.textContent.trim();
+        const span = info.querySelector("span");
+        
+        if (span) {
+            const spanText = span.textContent.trim();
+            
+            if (text.includes("Créé")) {
+                popupCreated.innerHTML = spanText;
+            } else if (text.includes("Technologies utilisées")) {
+                popupTechnologies.innerHTML = spanText;
+            } else if (text.includes("Rôle")) {
+                popupRole.innerHTML = spanText;
+            } else if (text.includes("Fonctionnalités")) {
+                popupFeatures.innerHTML = spanText;
+            } else if (text.includes("Lien Github")) {
+                const link = info.querySelector("a");
+                if (link) {
+                    popupGithubLink.href = link.href;
+                    popupGithubLink.textContent = link.textContent;
+                    popupGithub.style.display = "block";
+                }
+            }
+        }
+    });
 }
 /* Paw button */
 let confettiAmount = 60,

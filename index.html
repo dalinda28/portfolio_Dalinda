@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Balises SEO -->
-    <title>Dalinda Aloui – Développeuse Web</title>
+    <title>Dalinda Aloui – Développeuse Web Front-end | Portfolio</title>
     <meta name="description"
         content="Portfolio de Dalinda Aloui, développeuse web freelance à Paris, spécialisée en React.js, Node.js, SEO et design UX/UI. Découvrez mes projets et discutons de vos idées !">
     <meta name="keywords"
@@ -18,6 +18,21 @@
     <meta name="geo.placename" content="Paris" />
     <meta name="geo.position" content="48.8566;2.3522" /> <!-- Latitude et Longitude de Paris -->
     <meta name="ICBM" content="48.8566, 2.3522" /> <!-- Ancienne méthode pour localisation -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dalinda-aloui.fr/">
+    <meta property="og:title" content="Dalinda Aloui - Développeuse Web Front-end">
+    <meta property="og:description" content="Portfolio de Dalinda Aloui, développeuse web freelance à Paris, spécialisée en React.js, Node.js, SEO et design UX/UI">
+    <meta property="og:image" content="img/profile-img.WebP">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dalinda-aloui.fr/">
+    <meta property="twitter:title" content="Dalinda Aloui - Développeuse Web Front-end">
+    <meta property="twitter:description" content="Portfolio de Dalinda Aloui, développeuse web freelance à Paris, spécialisée en React.js, Node.js, SEO et design UX/UI">
+    <meta property="twitter:image" content="img/profile-img.WebP">
 
     <!-- Open Graph (réseaux sociaux) -->
     <meta property="og:title" content="Dalinda - Développeuse Fullstack Freelance à Paris" />
@@ -157,7 +172,7 @@
                 <div class="row">
                     <div class="home-text">
                         <h1>Hello, I'm<strong> Dalinda</strong></h1>
-                        <h2> Développeuse web</h2>
+                        <h2>Développeuse Full-stack</h2>
                         <a href="#about" class="btn link-item">En savoir plus</a>
                         <a href="#portfolio" class="btn link-item">Projets</a>
                         <a href="#" class="paw-button">
@@ -253,10 +268,7 @@
                         <h4>Qui suis-je ? </h4>
                         <br>
                         <p>
-                            Je suis développeuse front-end JavaScript/React, installée à Paris.
-                            J’aime donner vie à des idées à travers des interfaces web belles et fluides.
-                            Un peu touche-à-tout, je m’intéresse aussi au back-end et au design de produit,
-                            toujours avec l’envie de construire des choses utiles et inspirantes.
+                            Je suis développeuse Full-stack React/Next.js , installée à Paris. J’aime donner vie à des idées à travers des interfaces web belles et fluides. Un peu touche-à-tout, je m’intéresse aussi au back-end et au design de produit, toujours avec l’envie de construire des choses utiles et inspirantes.
                         </p>
                         <br>
                         <!-- <div class="skills">
@@ -442,28 +454,80 @@
                         <h2>Projets Informatique</h2>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row portfolio-grid">
+                    <!-- Ligne 1 -->
+                    <!-- Portfolio Item End -->
+
                     <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/izisalles.png" alt="Aperçu du projet" loading="lazy">
+                            <img src="img/makanade.png" alt="Makanade Esthétique - Site vitrine studio beauté" loading="lazy" width="300" height="200">
                         </div>
-                        <h3 class="portfolio-item-title">IZISALLES</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
+                        <h3 class="portfolio-item-title">Makanade Esthétique</h3>
+                        <p class="portfolio-item-description">Site vitrine pour un studio beauté</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>Izisalle est un site de réservation de salles de conférence. Il a été réalisé en
-                                    collaboration avec deux étudiants dans le cadre du projet de licence Web et Mobile.
-                                </p>
+                                <p>Site vitrine moderne pour un studio de beauté spécialisé dans les extensions de cils et le maquillage semi-permanent.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Créé - <span>Avril 2021</span></li>
-                                    <li>Technologies utilisées - <span>NodeJS, MYSQL, VueJS, Vuex</span></li>
-                                    <li>Rôle - <span>Frontend</span></li>
-                                    <li>Lien Github - <span><a
-                                                href="https://github.com/dalinda28/IZISALLES/tree/main/reservations_salles"
-                                                target="_blank">IZISALLES</a></span></li>
+                                    <li>Créé - <span>2025</span></li>
+                                    <li>Technologies utilisées - <span>Next.js, TailwindCSS, Vercel</span></li>
+                                    <li>Rôle - <span>Frontend Developer</span></li>
+                                    <li>Fonctionnalités - <span>Présentation prestations & tarifs, Design responsive, SEO optimisé, Formulaire de contact</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/engheindent.png" alt="EngheinDent - Site vitrine laboratoire dentaire" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">EngheinDent</h3>
+                        <p class="portfolio-item-description">Site vitrine laboratoire dentaire</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Site vitrine professionnel pour un laboratoire dentaire avec présentation des services et galerie de réalisations.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>2025</span></li>
+                                    <li>Technologies utilisées - <span>WordPress personnalisé, Elementor</span></li>
+                                    <li>Rôle - <span>Frontend Developer</span></li>
+                                    <li>Fonctionnalités - <span>Page services, Galerie photos, Formulaire contact, SEO optimisé</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Ligne 2 -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/aboneo.png" alt="Abonéo - Gestion d'abonnements" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">Abonéo</h3>
+                        <p class="portfolio-item-description">Gestion d'abonnements en ligne</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Application web pour gérer ses abonnements (Netflix, Spotify, etc.) avec calcul automatique des coûts et notifications.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>2025</span></li>
+                                    <li>Technologies utilisées - <span>React, Node.js, Supabase</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>Gestion abonnements, Calcul coûts, Notifications échéances, Dark mode</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -473,23 +537,21 @@
                     <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/izigo_ReactNative.png" alt="Aperçu du projet" loading="lazy">
+                            <img src="img/identityflow.png" alt="IdentityFlow - Branding et storytelling IA" loading="lazy" width="300" height="200">
                         </div>
-                        <h3 class="portfolio-item-title">IziGo</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
+                        <h3 class="portfolio-item-title">IdentityFlow</h3>
+                        <p class="portfolio-item-description">Branding et storytelling IA</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>IziGo est une application dédiée aux utilisateurs des transports publics de la RATP
-                                    et de la SNCF. Elle a été conçue en collaboration avec deux étudiants dans le cadre
-                                    d'un projet de licence Web et Mobile.</p>
+                                <p>Plateforme d'accompagnement pour entrepreneuses avec génération IA de positionnement, storytelling et identité visuelle.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Créé - <span>Juin 2021</span></li>
-                                    <li>Technologies utilisées - <span>React Native</span></li>
-                                    <li>Rôle - <span>Frontend</span></li>
-                                    <li>Lien Github - <span><a href="https://github.com/dalinda28/izigo"
-                                                target="_blank">izigo</a></span></li>
+                                    <li>Créé - <span>2025</span></li>
+                                    <li>Technologies utilisées - <span>Next.js, Tailwind, OpenAI API</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>Questionnaire guidé, Génération IA, Palette couleurs, Moodboard</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -499,21 +561,21 @@
                     <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/FEELUNIQUE_Symfony.png" alt="E-commerce" loading="lazy">
+                            <img src="img/sya.png" alt="S.Y.A - Boutique artisanale" loading="lazy" width="300" height="200">
                         </div>
-                        <h3 class="portfolio-item-title">FEELUNIQUE</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
+                        <h3 class="portfolio-item-title">S.Y.A</h3>
+                        <p class="portfolio-item-description">Boutique artisanale</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>Création d'un site e-commerce avec <strong>Symfony</strong>.</p>
+                                <p>Boutique en ligne d'artisanat et robes avec gestion de contenu via CMS et e-commerce personnalisé.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
-                                    <li>Créé - <span>Novembre 2020</span></li>
-                                    <li>Technologies utilisées - <span>Symfony</span></li>
-                                    <li>Rôle - <span>Frontend - Backend</span></li>
-                                    <li>Lien Github - <span><a href="https://github.com/dalinda28/FEELUNIQUE-Ecommerce"
-                                                target="_blank">FEELUNIQUE-Ecommerce</a></span></li>
+                                    <li>Créé - <span>2025</span></li>
+                                    <li>Technologies utilisées - <span>Next.js, Sanity CMS</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>Gestion contenu CMS, E-commerce personnalisé, Optimisation SEO, Catalogue produits</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -523,67 +585,218 @@
                     <!-- Portfolio Item Start -->
                     <div class="portfolio-item">
                         <div class="portfolio-item-thumbnail">
-                            <img src="img/ecommerce.png" alt="Aperçu du projet" loading="lazy">
+                            <img src="img/aalia.png" alt="Chatbot AALIA - Chatbot intelligent Station F" loading="lazy" width="300" height="200">
                         </div>
-                        <h3 class="portfolio-item-title">E-commerce</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
+                        <h3 class="portfolio-item-title">Chatbot AALIA.tech</h3>
+                        <p class="portfolio-item-description">Chatbot intelligent médicale</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
                         <div class="portfolio-item-details">
                             <div class="description">
-                                <p>Création d'un site e-commerce avec Wordpress.</p>
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>Créé - <span>Avril 2022</span></li>
-                                    <li>Technologies utilisées - <span>WordPress : WooCommerce / Stripe / PayPal / Yoast
-                                            SEO / Elementor</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Portfolio Item End -->
-
-                    <!-- Portfolio Item Start -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-item-thumbnail">
-                            <img src="img/Isoeon.png" alt="Aperçu du projet" loading="lazy">
-                        </div>
-                        <h3 class="portfolio-item-title">Isoeon</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                <p>Projet collectif d'un site web de précommande de thermos personnalisable.</p>
-                            </div>
-                            <div class="general-info">
-                                <ul>
-                                    <li>Créé - <span>Février 2022</span></li>
-                                    <li>Technologies utilisées - <span>HTML, Sass</span></li>
-                                    <li>Rôle - <span>Frontend</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Portfolio Item End -->
-
-                    <!-- Portfolio Item Start -->
-                    <div class="portfolio-item">
-                        <div class="portfolio-item-thumbnail">
-                            <img src="img/aalia.png" alt="Aperçu du projet" loading="lazy">
-                        </div>
-                        <h3 class="portfolio-item-title">Chatbot AALIA</h3>
-                        <button type="button" class="btn view-project-btn" aria-label="Voir le projet">Détails</button>
-                        <div class="portfolio-item-details">
-                            <div class="description">
-                                <p>Amélioration d'un chatbot dans le cadre de mon stage de 8 semaines dans la start-up
-                                    AALIA.Tech, en utilisant <strong>VueJS</strong> et en l'hébergeant sur
-                                    <strong>Firebase</strong>.
-                                </p>
+                                <p>Développement d'un chatbot intelligent pour Aalia.tech avec traitement du langage naturel multilingue et scénarios personnalisés.</p>
                             </div>
                             <div class="general-info">
                                 <ul>
                                     <li>Créé - <span>Août 2020</span></li>
-                                    <li>Technologies utilisées - <span>VueJS, Sass, Firebase, Webpack, ESLint</span>
-                                    </li>
-                                    <li>Rôle - <span>Frontend - Backend</span></li>
+                                    <li>Technologies utilisées - <span>React, Node.js, Dialogflow, VueJS, Firebase</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>NLP multilingue, Version web & mobile, Scénarios personnalisés, Interface intuitive</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Ligne 3 -->
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/Isoeon.png" alt="Isoeon - Site vitrine boisson naturelle" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">Isoeon</h3>
+                        <p class="portfolio-item-description">Site vitrine boisson naturelle</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Site vitrine moderne pour une marque de boissons naturelles avec présentation des produits et design responsive.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>Février 2022</span></li>
+                                    <li>Technologies utilisées - <span>React, TailwindCSS, HTML, Sass</span></li>
+                                    <li>Rôle - <span>Frontend Developer</span></li>
+                                    <li>Fonctionnalités - <span>Présentation produits, Design responsive, Interface moderne, Optimisation SEO</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/oryxchange.png" alt="OryxChange - Plateforme éco-responsable" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">OryxChange</h3>
+                        <p class="portfolio-item-description">Plateforme éco-responsable bénévole</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Application collaborative pour favoriser les choix éco-responsables avec filtres de recherche et tableau de bord utilisateurs.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>Avril 2025</span></li>
+                                    <li>Technologies utilisées - <span>Next.js, Strapi, Docker, PostgreSQL</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>Filtres recherche produits, Tableau de bord, UI/UX éco-design, Gestion contenu</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/izisalles.png" alt="IZISALLES - Gestion de réservation de salles" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">IZISALLES</h3>
+                        <p class="portfolio-item-description">Gestion de réservation de salles</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Site de réservation de salles de conférence avec interface d'administration pour gérer utilisateurs, salles et réservations.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>Avril 2021</span></li>
+                                    <li>Technologies utilisées - <span>NodeJS, MySQL, VueJS, Vuex</span></li>
+                                    <li>Rôle - <span>Frontend Developer</span></li>
+                                    <li>Fonctionnalités - <span>Réservation en ligne, Interface admin, Gestion utilisateurs, Vue d'ensemble réservations</span></li>
+                                    <li>Lien Github - <span><a href="https://github.com/dalinda28/IZISALLES/tree/main/reservations_salles" target="_blank">IZISALLES</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/izigo_ReactNative.png" alt="IziGo - Application mobile de mobilité urbaine" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">IziGo</h3>
+                        <p class="portfolio-item-description">Application mobile de mobilité urbaine</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Application dédiée aux utilisateurs des transports publics de la RATP et SNCF avec informations en temps réel et planification d'itinéraires.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>Juin 2021</span></li>
+                                    <li>Technologies utilisées - <span>React Native, Firebase</span></li>
+                                    <li>Rôle - <span>Frontend Developer</span></li>
+                                    <li>Fonctionnalités - <span>Informations temps réel, Planification itinéraires, Interface intuitive, Notifications</span></li>
+                                    <li>Lien Github - <span><a href="https://github.com/dalinda28/izigo" target="_blank">izigo</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Ligne 4 -->
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/FEELUNIQUE_Symfony.png" alt="FEELUNIQUE - E-commerce cosmétique" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">FEELUNIQUE</h3>
+                        <p class="portfolio-item-description">E-commerce cosmétique</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Création d'un site e-commerce complet avec Symfony incluant gestion des produits, panier, commandes et administration.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>Novembre 2020</span></li>
+                                    <li>Technologies utilisées - <span>Symfony, PHP, MySQL</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>Catalogue produits, Panier d'achat, Gestion commandes, Interface admin</span></li>
+                                    <li>Lien Github - <span><a href="https://github.com/dalinda28/FEELUNIQUE-Ecommerce" target="_blank">FEELUNIQUE-Ecommerce</a></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/ecommerce.png" alt="E-commerce générique - Plateforme e-commerce" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">E-commerce</h3>
+                        <p class="portfolio-item-description">Plateforme e-commerce générique</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Plateforme e-commerce générique avec WordPress incluant WooCommerce, paiements sécurisés et optimisation SEO.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>Avril 2022</span></li>
+                                    <li>Technologies utilisées - <span>WordPress, WooCommerce, Stripe, PayPal, Yoast SEO, Elementor</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>Gestion produits, Paiements sécurisés, SEO optimisé, Interface admin</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/soundboard_ReactNative.png" alt="Soundboard - Application mobile audio" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">Soundboard</h3>
+                        <p class="portfolio-item-description">Application mobile audio</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Application mobile de soundboard avec collection de sons et effets audio pour divertissement et créativité.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>2023</span></li>
+                                    <li>Technologies utilisées - <span>React Native, Audio API</span></li>
+                                    <li>Rôle - <span>Frontend Developer</span></li>
+                                    <li>Fonctionnalités - <span>Collection sons, Lecture audio, Interface intuitive, Catégorisation</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item End -->
+
+                    <!-- Portfolio Item Start -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-item-thumbnail">
+                            <img src="img/comingsoon.png" alt="Projet à venir" loading="lazy" width="300" height="200">
+                        </div>
+                        <h3 class="portfolio-item-title">Projet à venir</h3>
+                        <p class="portfolio-item-description">Nouveau projet en développement</p>
+                        <button type="button" class="btn view-project-btn" aria-label="Voir les détails du projet" aria-describedby="project-description">Détails</button>
+                        <div class="portfolio-item-details">
+                            <div class="description">
+                                <p>Nouveau projet en cours de développement avec les dernières technologies et bonnes pratiques.</p>
+                            </div>
+                            <div class="general-info">
+                                <ul>
+                                    <li>Créé - <span>En cours</span></li>
+                                    <li>Technologies utilisées - <span>À définir</span></li>
+                                    <li>Rôle - <span>Full-stack Developer</span></li>
+                                    <li>Fonctionnalités - <span>En développement</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -653,31 +866,29 @@
     <!--Main End-->
 
     <!--Portfolio Item Details Popup Start-->
-    <div class="portfolio-popup">
+    <div class="portfolio-popup" role="dialog" aria-labelledby="project-title" aria-describedby="project-description" aria-modal="true">
         <div class="pp-inner">
             <div class="pp-content">
                 <div class="pp-header">
-                    <button type="button" class="btn pp-close" aria-label="Fermer">
-                        <i class="fas fa-times"></i>
+                    <button type="button" class="btn pp-close" aria-label="Fermer les détails du projet">
+                        <i class="fas fa-times" aria-hidden="true"></i>
                     </button>
-                    <h3 class="portfolio-item-title">Online room reservation</h3>
+                    <h3 class="portfolio-item-title" id="project-title">Titre du projet</h3>
+                </div>
+                <div class="pp-thumbnail">
+                    <img src="" alt="Image du projet" class="pp-project-image">
                 </div>
                 <div class="pp-body">
                     <div class="description">
-                        <p>It is a site that allows you to reserve a room online from a set of given rooms, and to check
-                            the reservation status of a set of rooms.
-                            All this with an administration interface that allows to manage users, rooms, and also to
-                            have a visual overview of the current reservations.
-                        </p>
+                        <p class="pp-project-description" id="project-description">Description du projet</p>
                     </div>
                     <div class="general-info">
-                        <ul>
-                            <li>Created - <span>16 may 2021</span></li>
-                            <li>technologies used - <span>html, css</span></li>
-                            <li>Role - <span>Frontend and Backend</span></li>
-                            <li>Github link - <span><a
-                                        href="https://www.youtube.com/watch?v=qV39xmCHgxI&ab_channel=IssamLaazayri"
-                                        target="_blank">Presentation of the project - Youtube</a></span></li>
+                        <ul class="pp-project-info">
+                            <li>Créé - <span class="pp-created">Date</span></li>
+                            <li>Technologies utilisées - <span class="pp-technologies">Technologies</span></li>
+                            <li>Rôle - <span class="pp-role">Rôle</span></li>
+                            <li>Fonctionnalités - <span class="pp-features">Fonctionnalités</span></li>
+                            <li class="pp-github" style="display: none;">Lien Github - <span><a href="#" target="_blank" class="pp-github-link">Lien</a></span></li>
                         </ul>
                     </div>
                 </div>
@@ -685,6 +896,8 @@
         </div>
     </div>
     <!--Portfolio Item Details Popup End-->
+
+
     <script src="js/script.js" defer></script>
     <script src="js/magic_mouse.js" defer></script>
     <link rel="manifest" href="manifest.json">
