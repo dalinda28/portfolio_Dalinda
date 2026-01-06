@@ -815,8 +815,18 @@ button{
     font-weight: 300;
     margin: 0 0 30px;
 }
+.home-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
 .home-text .btn{
-    margin: 0 15px 15px 0;
+    margin: 0;
+}
+.paw-button {
+    margin: 0 !important;
 }
 
 .home-text,
@@ -1293,8 +1303,11 @@ textarea {
     .home-img .home-box{
         max-width: 300px;
     }
+    .home-buttons {
+        gap: 10px;
+    }
     .home-text .btn{
-        margin: 0 7px 15px;
+        margin: 0;
     }
     .portfolio-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1343,11 +1356,16 @@ textarea {
         margin-bottom: 20px;
     }
     
+    /* Boutons en flex colonne sur mobile */
+    .home-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
     /* Boutons en pleine largeur */
     .home-text .btn {
-        display: block;
         width: 100%;
-        margin: 10px 0;
+        margin: 0;
         padding: 15px 20px;
         font-size: 16px;
         text-align: center;
@@ -1360,9 +1378,9 @@ textarea {
     }
     /* Bouton like sur mobile */
     .paw-button {
-        margin: 20px auto 0;
-        display: block;
-        width: fit-content;
+        margin: 0 !important;
+        width: 100%;
+        justify-content: center;
     }
     
     
