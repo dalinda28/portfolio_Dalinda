@@ -791,11 +791,14 @@ button{
 
 /* Home Section */
 .home-section{
-    padding: 100px 0;
+    padding: 0;
 }
 .home-section.active{
         display: flex;
 
+}
+.home-section .container{
+    transform: translateY(clamp(10px, 3vh, 32px));
 }
 .home-text,
 .home-img{
@@ -1289,6 +1292,9 @@ textarea {
 @media(max-width: 991px){
     .container{
         padding: 0 30px;
+    }
+    .home-section .container{
+        transform: none;
     }
     .home-text,
     .home-img{
