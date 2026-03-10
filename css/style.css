@@ -800,10 +800,19 @@ button{
 .home-section .container{
     transform: translateY(clamp(10px, 3vh, 32px));
 }
+.home-section .row {
+    align-items: stretch;
+    gap: 40px;
+}
 .home-text,
 .home-img{
     width: 50%;
     padding: 15px;
+}
+.home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .home-text p{ 
      font-size: 18px;
@@ -814,16 +823,44 @@ button{
 }
 .home-text h2 {
     font-size: 20px;
-    text-transform: capitalize ;
+    text-transform: capitalize;
     font-weight: 300;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
+}
+.home-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.home-stat-item {
+    background-color: var(--white-alpha-25);
+    border: 1px solid var(--white-alpha-40);
+    border-radius: 20px;
+    padding: 16px 24px;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.home-stat-value {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--main-color);
+    line-height: 1.2;
+}
+.home-stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--blue-dark);
+    font-weight: 500;
 }
 .home-buttons {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 15px;
-    margin-top: 20px;
 }
 .home-text .btn{
     margin: 0;
@@ -847,6 +884,36 @@ button{
 .home-img .img-box img{
     width: 100%;
     border-radius: 50%;
+}
+.home-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+.home-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 250px;
+}
+.home-social .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.home-social .btn i {
+    margin-right: 8px;
+}
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--white-alpha-40);
+}
+.btn-outline:hover {
+    color: var(--white);
+    border-color: var(--main-color);
 }
 
 /* About section */
@@ -1256,9 +1323,16 @@ button{
     margin: 6px 4px 0 0;
     transition: all 0.3s ease;
 }
-.contact-info-item .links a{
+.contact-detail {
+    margin-bottom: 12px;
+}
+.contact-info-item .links a,
+.contact-link {
     color: var(--main-color);
     transition: all 0.3s ease;
+}
+.contact-link:hover {
+    text-decoration: underline;
 }
 .contact-info-item .social-links a:hover{
     color: var(--white);
@@ -1308,6 +1382,13 @@ textarea {
     }
     .home-img .home-box{
         max-width: 300px;
+    }
+    .home-stats {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .home-social {
+        max-width: 100%;
     }
     .home-buttons {
         gap: 10px;
@@ -1361,7 +1442,15 @@ textarea {
         font-size: 18px;
         margin-bottom: 20px;
     }
-    
+    .home-stats {
+        justify-content: center;
+    }
+    .home-stat-item {
+        min-width: 120px;
+    }
+    .home-social .btn {
+        width: 100%;
+    }
     /* Boutons en flex colonne sur mobile */
     .home-buttons {
         flex-direction: column;

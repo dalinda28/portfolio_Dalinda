@@ -240,3 +240,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/* Protection contact : email et téléphone assemblés côté client (anti-spam / anti-bots) */
+document.addEventListener('DOMContentLoaded', function () {
+    var emailEl = document.getElementById('contact-email');
+    if (emailEl) {
+        var user = emailEl.getAttribute('data-user');
+        var domain = emailEl.getAttribute('data-domain');
+        if (user && domain) {
+            var email = user + '\u0040' + domain;
+            emailEl.href = 'mailto:' + email;
+            emailEl.textContent = email;
+        }
+    }
+    var phoneEl = document.getElementById('contact-phone');
+    if (phoneEl) {
+        var tel = phoneEl.getAttribute('data-tel');
+        if (tel) {
+            var clean = tel.replace(/\s/g, '');
+            phoneEl.href = 'tel:' + clean;
+            if (clean.length === 10 && clean.startsWith('0')) {
+                phoneEl.textContent = clean.replace(/(\d{2})(?=\d)/g, '$1 ');
+            } else {
+                phoneEl.textContent = tel;
+            }
+        }
+    }
+});
